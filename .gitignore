@@ -1,0 +1,21 @@
+# Claude Code
+.claude/
+
+# IDE
+.idea/
+.vscode/
+
+# Build
+build/
+.gradle/
+*.apk
+*.aab
+
+# OS
+.DS_Store
+*.swp
+*.swo
+
+# Android
+.gradle
+local.properties

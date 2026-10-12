@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DriveNext</string>
+
+    <string name="splash_slogan">Поможем найти твою следующую поездку</string>
+    <string name="splash_logo_description">Логотип DriveNext</string>
+
+    <string name="no_connection_title">Нет подключения\nк интернету</string>
+    <string name="no_connection_subtitle">Проверьте подключение и повторите попытку</string>
+    <string name="no_connection_retry">Повторить попытку</string>
+    <string name="no_connection_still_offline">Подключение по-прежнему отсутствует</string>
+    <string name="no_connection_icon_description">Нет соединения</string>
+
+    <string name="onboarding_skip">Пропустить</string>
+    <string name="onboarding_next">Далее</string>
+    <string name="onboarding_go">Поехали</string>
+    <string name="onboarding_title_1">Аренда автомобилей</string>
+    <string name="onboarding_description_1">Открой для себя удобный и доступный способ передвижения</string>
+    <string name="onboarding_title_2">Безопасно и удобно</string>
+    <string name="onboarding_description_2">Арендуй автомобиль и наслаждайся его удобством</string>
+    <string name="onboarding_title_3">Лучшие предложения</string>
+    <string name="onboarding_description_3">Выбирай понравившееся среди сотен доступных автомобилей</string>
+
+    <!-- Вход / регистрация -->
+    <string name="auth_sign_in">Войти</string>
+    <string name="auth_sign_up">Зарегистрироваться</string>
+
+    <!-- Вход в аккаунт -->
+    <string name="login_title">Войдите в аккаунт</string>
+    <string name="login_subtitle">Пожалуйста, введите свои данные</string>
+    <string name="login_forgot_password">Забыли пароль?</string>
+    <string name="login_with_google">Войти через Google</string>
+    <string name="login_reset_sent">Письмо для восстановления пароля отправлено на %1$s</string>
+    <string name="login_reset_need_email">Введите адрес электронной почты, чтобы восстановить пароль.</string>
+
+    <!-- Поля -->
+    <string name="field_email">Электронная почта</string>
+    <string name="field_email_hint">Введите электронную почту</string>
+    <string name="field_password">Пароль</string>
+    <string name="field_password_hint">Введите пароль</string>
+    <string name="field_new_password">Придумайте пароль</string>
+    <string name="field_repeat_password">Повторите пароль</string>
+    <string name="field_last_name">Фамилия</string>
+    <string name="field_last_name_hint">Введите фамилию</string>
+    <string name="field_first_name">Имя</string>
+    <string name="field_first_name_hint">Введите имя</string>
+    <string name="field_middle_name">Отчество</string>
+    <string name="field_middle_name_hint">Введите отчество</string>
+    <string name="field_birth_date">Дата рождения</string>
+    <string name="field_date_hint">DD/MM/YYYY</string>
+    <string name="field_gender">Пол</string>
+    <string name="gender_male">Мужской</string>
+    <string name="gender_female">Женский</string>
+    <string name="field_license_number">Номер водительского удостоверения</string>
+    <string name="field_license_number_hint">0000000000</string>
+    <string name="field_issue_date">Дата выдачи</string>
+    <string name="field_license_photo">Загрузите фото водительского удостоверения</string>
+    <string name="field_passport_photo">Загрузите фото паспорта</string>
+    <string name="upload_photo">Загрузить фото</string>
+    <string name="photo_uploaded">Фото добавлено</string>
+    <string name="open_calendar">Открыть календарь</string>
+    <string name="pick_birth_date">Дата рождения</string>
+    <string name="pick_issue_date">Дата выдачи</string>
+
+    <!-- Регистрация -->
+    <string name="register_title">Создать аккаунт</string>
+    <string name="register_terms">Я согласен с условиями обслуживания и политикой конфиденциальности</string>
+    <string name="register_next">Далее</string>
+    <string name="register_avatar_hint">Добавление фотографии поможет владельцам и арендаторам узнать друг друга, когда они будут забирать машину</string>
+    <string name="register_avatar_description">Фото профиля</string>
+    <string name="photo_source_title">Добавить фото</string>
+    <string name="photo_source_gallery">Выбрать из галереи</string>
+    <string name="photo_source_camera">Сделать снимок</string>
+    <string name="camera_unavailable">Не удалось открыть камеру</string>
+    <string name="registering">Создаём аккаунт…</string>
+
+    <!-- Успешная регистрация -->
+    <string name="success_header">Пользуйтесь с удовольствием</string>
+    <string name="success_title">Поздравляем</string>
+    <string name="success_text">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
+    <string name="success_next">Далее</string>
+
+    <!-- Ошибки валидации (тексты из ТЗ) -->
+    <string name="error_invalid_email">Введите корректный адрес электронной почты.</string>
+    <string name="error_passwords_mismatch">Пароли не совпадают.</string>
+    <string name="error_terms_not_accepted">Необходимо согласиться с условиями обслуживания и политикой конфиденциальности.</string>
+    <string name="error_required_fields">Пожалуйста, заполните все обязательные поля.</string>
+    <string name="error_invalid_birth_date">Введите корректную дату рождения.</string>
+    <string name="error_invalid_issue_date">Введите корректную дату выдачи.</string>
+    <string name="error_photos_required">Пожалуйста, загрузите все необходимые фото.</string>
+    <string name="error_password_short">Пароль должен содержать не менее 6 символов.</string>
+    <string name="error_license_number">Номер должен состоять из 10 цифр.</string>
+
+    <!-- Ошибки сервера -->
+    <string name="error_dialog_title">Ошибка</string>
+    <string name="error_no_connection">Нет подключения к интернету.</string>
+    <string name="error_not_configured">Сервер не настроен: укажите supabase.url и supabase.key в local.properties.</string>
+    <string name="error_invalid_credentials">Неверная электронная почта или пароль.</string>
+    <string name="error_email_not_confirmed">Подтвердите электронную почту по ссылке из письма и войдите в аккаунт.</string>
+    <string name="error_user_exists">Пользователь с такой электронной почтой уже зарегистрирован.</string>
+    <string name="error_weak_password">Пароль слишком простой. Придумайте более надёжный пароль.</string>
+    <string name="error_too_many_requests">Слишком много попыток. Попробуйте позже.</string>
+    <string name="error_file_read">Не удалось прочитать выбранное фото. Выберите другое.</string>
+    <string name="error_server">Ошибка сервера: %1$s</string>
+    <string name="error_unknown">Что-то пошло не так. Попробуйте ещё раз.</string>
+    <string name="ok">ОК</string>
+
+    <string name="main_placeholder">Главный экран\n(появится в следующих лабах)</string>
+</resources>
