@@ -43,6 +43,8 @@ class SupabaseProvider {
         const val DEEPLINK_HOST = "login-callback"
 
         const val USERS_TABLE = "users"
+        const val CARS_TABLE = "cars"
         const val DOCUMENTS_BUCKET = "documents"
+        const val CARS_BUCKET = "cars"
     }
 }

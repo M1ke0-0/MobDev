@@ -17,4 +17,7 @@ interface AuthRepository {
     suspend fun sendPasswordReset(email: String)
 
     suspend fun register(data: RegistrationData)
+
+    /** Выход из аккаунта. Локальная сессия удаляется, даже если сервер недоступен. */
+    suspend fun signOut()
 }

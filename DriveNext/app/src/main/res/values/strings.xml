@@ -105,5 +105,135 @@
     <string name="error_unknown">Что-то пошло не так. Попробуйте ещё раз.</string>
     <string name="ok">ОК</string>
 
-    <string name="main_placeholder">Главный экран\n(появится в следующих лабах)</string>
+    <string name="error_session_expired">Сессия истекла. Войдите в аккаунт заново.</string>
+
+    <!-- Нижнее меню -->
+    <string name="nav_home">Главная</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="nav_settings">Настройки</string>
+
+    <!-- Главная и результаты поиска -->
+    <string name="home_search_hint">Введите марку автомобиля</string>
+    <string name="home_title">Давайте найдем автомобиль</string>
+    <string name="home_empty">Сейчас нет доступных автомобилей</string>
+    <string name="search_title">Результаты поиска</string>
+    <string name="search_empty">По вашему запросу ничего не найдено</string>
+    <string name="search_enter_query">Введите марку или модель автомобиля</string>
+    <string name="car_price">%1$d₽</string>
+    <string name="car_price_period">в день</string>
+    <string name="car_book">Забронировать</string>
+    <string name="car_details">Детали</string>
+    <string name="car_image_description">Фото %1$s %2$s</string>
+    <string name="transmission_automatic">А/Т</string>
+    <string name="transmission_manual">М/Т</string>
+    <string name="fuel_petrol">Бензин</string>
+    <string name="fuel_diesel">Дизель</string>
+    <string name="fuel_electric">Электро</string>
+    <string name="fuel_hybrid">Гибрид</string>
+    <string name="retry">Повторить</string>
+    <!-- Тексты ошибок из ТЗ -->
+    <string name="error_load_data">Не удалось загрузить данные. Попробуйте снова.</string>
+    <string name="error_search">Не удалось выполнить поиск. Попробуйте снова.</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_my_bookings">Мои бронирования</string>
+    <string name="settings_theme">Тема</string>
+    <string name="settings_notifications">Уведомления</string>
+    <string name="settings_add_car">Подключить свой автомобиль</string>
+    <string name="settings_help">Помощь</string>
+    <string name="settings_invite">Пригласи друга</string>
+    <string name="settings_invite_text">Арендуй автомобиль в приложении DriveNext — быстро и удобно!</string>
+    <string name="settings_in_progress">Раздел появится в следующих версиях</string>
+    <string name="settings_open_profile">Открыть профиль</string>
+
+    <!-- Профиль -->
+    <string name="profile_title">Профиль</string>
+    <string name="profile_avatar_description">Аватар. Нажмите, чтобы загрузить новый</string>
+    <string name="profile_joined_male">Присоединился в %1$s %2$d</string>
+    <string name="profile_joined_female">Присоединилась в %1$s %2$d</string>
+    <string name="profile_password_change">Поменять пароль</string>
+    <string name="profile_password_sent">Письмо для смены пароля отправлено на %1$s</string>
+    <string name="profile_gender_unknown">Не указан</string>
+    <string name="profile_google">Google</string>
+    <string name="profile_google_not_linked">Не подключён</string>
+    <string name="profile_sign_out">Выйти из профиля</string>
+    <string name="profile_avatar_updated">Фото профиля обновлено</string>
+    <string name="profile_saving">Сохраняем…</string>
+    <!-- Месяц в предложном падеже: «в июле» -->
+    <string-array name="months_prepositional">
+        <item>январе</item>
+        <item>феврале</item>
+        <item>марте</item>
+        <item>апреле</item>
+        <item>мае</item>
+        <item>июне</item>
+        <item>июле</item>
+        <item>августе</item>
+        <item>сентябре</item>
+        <item>октябре</item>
+        <item>ноябре</item>
+        <item>декабре</item>
+    </string-array>
+
+    <!-- Экраны из следующих лаб -->
+    <string name="coming_soon_text">Этот экран появится в следующих лабораторных работах</string>
+    <string name="add_car_title">Добавление автомобиля</string>
+
+    <!-- Детали -->
+    <string name="details_title">Детали</string>
+    <string name="details_add_favorite">Добавить в избранное</string>
+    <string name="details_remove_favorite">Убрать из избранного</string>
+    <string name="details_address">Адрес нахождения</string>
+    <string name="details_description">Описание</string>
+    <string name="details_no_description">Описание пока не добавлено</string>
+    <string name="car_full_name">%1$s %2$s</string>
+    <string name="car_price_per_day">%1$d₽/день</string>
+    <string name="error_add_favorite">Не удалось добавить в избранное. Попробуйте снова.</string>
+
+    <!-- Избранное -->
+    <string name="favorites_title">Избранное</string>
+    <string name="favorites_empty">Вы пока ничего не добавили в избранное</string>
+
+    <!-- Оформление аренды -->
+    <string name="booking_title">Оформление аренды</string>
+    <string name="booking_start">Начало аренды:</string>
+    <string name="booking_end">Конец аренды:</string>
+    <string name="booking_pick_dates">Выберите даты аренды</string>
+    <string name="booking_rent">Аренда автомобиля ×%1$s</string>
+    <string name="booking_insurance">Страховка ×%1$s</string>
+    <string name="booking_total">Итого</string>
+    <string name="booking_deposit">Возвращаемый депозит</string>
+    <string name="booking_continue">Продолжить</string>
+    <string name="price_rub">%1$d₽</string>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
+    </plurals>
+
+    <!-- Удачной поездки -->
+    <string name="booking_success_header">Удачной поездки</string>
+    <string name="booking_success_text">Бронирование успешно создано</string>
+    <string name="booking_success_my_bookings">Перейти к своим бронированиям</string>
+    <string name="booking_success_home">Домой</string>
+
+    <!-- Мои бронирования -->
+    <string name="my_bookings_title">Мои бронирования</string>
+    <string name="my_bookings_empty">У вас пока нет бронирований</string>
+    <string name="my_bookings_active">Начало аренды: %1$s</string>
+    <string name="my_bookings_finished">Аренда завершена, %1$s</string>
+
+    <!-- Детальная информация о бронировании -->
+    <string name="booking_details_title">Бронирование #%1$d</string>
+    <string name="booking_details_driver">ФИО водителя</string>
+    <string name="booking_details_license">Номер ВУ</string>
+    <string name="booking_details_status">Статус аренды</string>
+    <string name="booking_status_approved">Одобрено</string>
+    <string name="booking_status_finished">Завершено</string>
+    <string name="booking_details_total">Общая сумма</string>
+    <string name="booking_cancel">Отменить бронирование</string>
+    <string name="booking_not_found">Бронирование не найдено</string>
+    <string name="no_value">—</string>
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Силуэт с отступами: с centerCrop выглядит так же, как настоящее фото в круглой рамке -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_avatar_placeholder"
+    android:inset="22%" />

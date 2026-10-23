@@ -19,6 +19,7 @@ fun Throwable.toUiText(): UiText = when (this) {
     is AppError.WeakPassword -> UiText(R.string.error_weak_password)
     is AppError.TooManyRequests -> UiText(R.string.error_too_many_requests)
     is AppError.FileReadFailed -> UiText(R.string.error_file_read)
+    is AppError.SessionExpired -> UiText(R.string.error_session_expired)
     is AppError.Server -> details?.let { UiText(R.string.error_server, it) } ?: UiText(R.string.error_unknown)
     else -> UiText(R.string.error_unknown)
 }

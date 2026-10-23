@@ -5,6 +5,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.serialization")
+    // KSP нужен Room: он генерирует код DAO и базы данных во время сборки
+    id("com.google.devtools.ksp")
 }
 
 // Ключи Supabase берём из local.properties, чтобы не коммитить их в Git.
@@ -61,9 +63,18 @@ dependencies {
 
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // Загрузка картинок по URL (фото машин и аватар) с кэшем в памяти и на диске
+    implementation("io.coil-kt:coil:2.7.0")
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+
+    // Room: локальная база для избранного и бронирований
+    implementation("androidx.room:room-runtime:2.7.2")
+    implementation("androidx.room:room-ktx:2.7.2")
+    ksp("androidx.room:room-compiler:2.7.2")
 
     // Supabase: авторизация, таблицы (PostgREST) и хранилище файлов
     implementation(platform("io.github.jan-tennert.supabase:bom:3.2.6"))

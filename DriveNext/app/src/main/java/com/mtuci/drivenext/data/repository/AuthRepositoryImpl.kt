@@ -1,9 +1,9 @@
 package com.mtuci.drivenext.data.repository
 
-import android.content.Context
 import android.content.SharedPreferences
 import android.net.Uri
 import androidx.core.content.edit
+import com.mtuci.drivenext.data.remote.PhotoUploader
 import com.mtuci.drivenext.data.remote.SupabaseProvider
 import com.mtuci.drivenext.data.remote.dto.UserProfileDto
 import com.mtuci.drivenext.data.remote.supabaseCall
@@ -15,17 +15,13 @@ import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.auth.providers.Google
 import io.github.jan.supabase.auth.providers.builtin.Email
 import io.github.jan.supabase.postgrest.postgrest
-import io.github.jan.supabase.storage.storage
-import io.ktor.http.ContentType
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
 class AuthRepositoryImpl(
-    private val context: Context,
     private val prefs: SharedPreferences,
-    private val supabase: SupabaseProvider
+    private val supabase: SupabaseProvider,
+    private val photoUploader: PhotoUploader
 ) : AuthRepository {
 
     override fun hasValidAccessToken(): Boolean =
@@ -76,9 +72,9 @@ class AuthRepositoryImpl(
         // Если в Supabase включено подтверждение почты, сессии после signUp не будет.
         val user = client.auth.currentUserOrNull() ?: throw AppError.EmailNotConfirmed()
 
-        val avatarPath = data.avatarUri?.let { uploadPhoto(user.id, "avatar", it) }
-        val licensePath = uploadPhoto(user.id, "license", data.licensePhotoUri)
-        val passportPath = uploadPhoto(user.id, "passport", data.passportPhotoUri)
+        val avatarPath = data.avatarUri?.let { photoUploader.upload(user.id, "avatar", it) }
+        val licensePath = photoUploader.upload(user.id, "license", data.licensePhotoUri)
+        val passportPath = photoUploader.upload(user.id, "passport", data.passportPhotoUri)
 
         client.postgrest[SupabaseProvider.USERS_TABLE].upsert(
             UserProfileDto(
@@ -99,23 +95,14 @@ class AuthRepositoryImpl(
         saveSession()
     }
 
-    /** Загружает фото в приватный бакет documents/<userId>/<name>.jpg и возвращает путь. */
-    private suspend fun uploadPhoto(userId: String, name: String, uriString: String): String {
-        val uri = Uri.parse(uriString)
-        val bytes = withContext(Dispatchers.IO) {
-            try {
-                context.contentResolver.openInputStream(uri)?.use { it.readBytes() }
-            } catch (e: Exception) {
-                null
-            }
-        } ?: throw AppError.FileReadFailed()
-
-        val path = "$userId/$name.jpg"
-        supabase.client.storage.from(SupabaseProvider.DOCUMENTS_BUCKET).upload(path, bytes) {
-            upsert = true
-            contentType = context.contentResolver.getType(uri)?.let(ContentType::parse) ?: ContentType.Image.JPEG
+    override suspend fun signOut() {
+        try {
+            supabaseCall { supabase.client.auth.signOut() }
+        } catch (e: AppError) {
+            // Сервер недоступен — всё равно забываем сессию на устройстве
+            runCatching { supabase.client.auth.clearSession() }
         }
-        return path
+        prefs.edit { remove(KEY_ACCESS_TOKEN) }
     }
 
     private fun saveSession() {

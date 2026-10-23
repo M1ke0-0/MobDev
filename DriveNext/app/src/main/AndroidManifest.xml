@@ -57,6 +57,9 @@
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".presentation.booking.BookingSuccessActivity"
+            android:exported="false" />
 
         <!-- Даёт камере доступ на запись снимка в наш cacheDir/photos через content:// Uri -->
         <provider

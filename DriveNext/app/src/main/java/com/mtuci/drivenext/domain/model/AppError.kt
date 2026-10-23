@@ -10,6 +10,7 @@ sealed class AppError : Exception() {
     class WeakPassword : AppError()
     class TooManyRequests : AppError()
     class FileReadFailed : AppError()
+    class SessionExpired : AppError()
     class Server(val details: String?) : AppError()
     class Unknown(val details: String?) : AppError()
 }
